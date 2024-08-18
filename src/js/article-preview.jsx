@@ -28,11 +28,9 @@ function renderArticle({ index, title, summary, image, link }) {
     );
 }
 
-
 const PAGE_SIZE = 4;
 
 export default class ArticlePreview extends React.Component {
-
     constructor(props) {
         super(props);
         this.articles = [];
@@ -40,7 +38,10 @@ export default class ArticlePreview extends React.Component {
     }
 
     nextPage() {
-        this.currentPageIndex = Math.min(Math.floor(ARTICLES.length / PAGE_SIZE), this.currentPageIndex + 1);
+        this.currentPageIndex = Math.min(
+            Math.floor(ARTICLES.length / PAGE_SIZE),
+            this.currentPageIndex + 1
+        );
         this.forceUpdate();
     }
 
@@ -56,7 +57,10 @@ export default class ArticlePreview extends React.Component {
 
     renderArticleList() {
         const offset = PAGE_SIZE * this.currentPageIndex;
-        const currentPage = ARTICLES.slice(PAGE_SIZE * this.currentPageIndex, offset + PAGE_SIZE);
+        const currentPage = ARTICLES.slice(
+            PAGE_SIZE * this.currentPageIndex,
+            offset + PAGE_SIZE
+        );
         return currentPage.map((article, index) =>
             renderArticle({
                 index,
@@ -65,26 +69,36 @@ export default class ArticlePreview extends React.Component {
         );
     }
 
-
     render() {
         return (
             <>
                 <div className="article-preview-list">
                     {this.renderArticleList()}
                 </div>
-                <div className='article-page-controls'>
+                <div className="article-page-controls">
                     <button onClick={() => this.prevPage()}>
                         <i className="fas fa-chevron-left" />
                     </button>
                     {(() => {
                         const rows = [];
-                        for (let i = 0; i < Math.ceil(ARTICLES.length / PAGE_SIZE); i++) {
-                        rows.push(<button
-                            // Heighlight the current page
-                            className={i === this.currentPageIndex ? 'active' : ''}
-                            onClick={() => this.goTo(i)}>
-                                {i + 1}
-                            </button>);
+                        for (
+                            let i = 0;
+                            i < Math.ceil(ARTICLES.length / PAGE_SIZE);
+                            i++
+                        ) {
+                            rows.push(
+                                <button
+                                    // Heighlight the current page
+                                    className={
+                                        i === this.currentPageIndex
+                                            ? 'active'
+                                            : ''
+                                    }
+                                    onClick={() => this.goTo(i)}
+                                >
+                                    {i + 1}
+                                </button>
+                            );
                         }
                         return rows;
                     })()}

@@ -11,7 +11,6 @@ $article-preview-width: 180px;
 }
 
 #articles {
-
     .article-preview-list {
         display: flex;
         flex-direction: column;
@@ -19,6 +18,7 @@ $article-preview-width: 180px;
         align-items: stretch;
         gap: $padding;
         animation: slideUp 0.5s ease-in-out forwards;
+        min-height: 90vh;
     }
 
     .article-page-controls {
@@ -46,6 +46,9 @@ $article-preview-width: 180px;
         background-color: var(--alternative);
         border: 1px solid var(--alternative);
         overflow: hidden;
+
+        font-family: 'Arial Black', sans-serif;
+
         @media screen and (min-width: $responsive) {
             border-radius: $border-radius;
         }
