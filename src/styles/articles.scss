@@ -1,0 +1,103 @@
+@import 'variables';
+
+$article-preview-width: 180px;
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#articles {
+
+    .article-preview-list {
+        display: flex;
+        flex-direction: column;
+        min-width: 100%;
+        align-items: stretch;
+        gap: $padding;
+        animation: slideUp 0.5s ease-in-out forwards;
+    }
+
+    .article-page-controls {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: $padding;
+        padding: $padding;
+
+        button {
+            border-bottom: 2px solid transparent;
+            &.active {
+                border-bottom: 2px solid var(--foreground);
+            }
+        }
+    }
+
+    .article-preview {
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        gap: $padding;
+        background-color: var(--alternative);
+        border: 1px solid var(--alternative);
+        overflow: hidden;
+        @media screen and (min-width: $responsive) {
+            border-radius: $border-radius;
+        }
+    }
+
+    .article-preview-image img {
+        min-width: $article-preview-width;
+        max-width: $article-preview-width;
+        min-height: 100%;
+        background-color: var(--secondary);
+    }
+
+    .article-preview-content {
+        display: flex;
+        flex-direction: column;
+        gap: $padding;
+        padding: $padding;
+        flex-grow: 1;
+    }
+
+    .article-preview-title {
+        font-weight: 100;
+        margin-top: 0;
+        font-size: 2em;
+        color: var(--foreground);
+        font-family: 'Arial', sans-serif;
+    }
+
+    .article-preview-summary {
+        color: var(--foreground);
+        font-family: 'Arial', sans-serif;
+    }
+
+    .article-preview-link {
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .article-preview-link:hover {
+        color: var(--accent);
+    }
+}
+
+@media screen and (min-width: $responsive) {
+}
+@media screen and (max-width: $responsive) {
+    #articles .article-preview {
+        flex-direction: column;
+        border-left: 0;
+        border-right: 0;
+        .article-preview-image img {
+            min-width: 100%;
+        }
+    }
+}
