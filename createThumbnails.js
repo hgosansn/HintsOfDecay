@@ -69,7 +69,7 @@ async function generateAndSaveImage(path, promptText) {
     try {
         // Generate the image using DALL-E
         const response = await openai.images.generate({
-            prompt: promptText,
+            prompt: "Photo of " + promptText + " , quality image, professional picture, realistic, high detail",
             n: 1,
             size: '512x512', // You can adjust the size as needed
         });

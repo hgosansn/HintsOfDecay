@@ -3,6 +3,11 @@ import React from 'react';
 
 const ARTICLES = require('./data/articles.js');
 
+const SEARCH_URLS = {
+    google: 'https://www.google.com/search?q=',
+    backle: 'http://www.blackle.com/results/?q='
+};
+
 function renderArticle({ index, title, summary, image, link }) {
     return (
         <div className="article-preview" key={index}>
@@ -16,8 +21,9 @@ function renderArticle({ index, title, summary, image, link }) {
                     <span> </span>
                     <a
                         className="article-preview-link"
-                        href={link}
-                        title="Read more about the article."
+                        href={SEARCH_URLS.backle + link}
+                        aria-label='Open a search on the topic'
+                        title="Read more about the topic on google"
                         target="_blank"
                     >
                         Read More...

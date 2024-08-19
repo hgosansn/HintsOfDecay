@@ -2,6 +2,7 @@ const { merge } = require('webpack-merge');
 const common = require('./webpack.config.js');
 const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
+const env = require('./environment');
 
 prod = true;
 
@@ -23,6 +24,6 @@ module.exports = merge(common, {
         filename: '[name].[chunkhash].js', // Enable cache-busting
         path: path.resolve(__dirname, 'dist'),
         clean: true,
-        publicPath: '/'
+        publicPath: env.publicPath
     },
 });
