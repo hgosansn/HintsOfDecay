@@ -91,35 +91,47 @@ const ARTICLES = [
         link: 'species+extinction+rates+accelerate',
     },
     {
-        "title": "Pesticides Decimating Bee Populations",
-        "summary": "The extensive use of pesticides is decimating bee populations, a critical pollinator species, threatening global food production and biodiversity as these essential insects face unprecedented declines.",
-        "image": "./assets/news/pesticides-bee-populations.png",
-        "link": "pesticides+bee+populations"
+        title: 'Pesticides Decimating Bee Populations',
+        summary:
+            'The extensive use of pesticides is decimating bee populations, a critical pollinator species, threatening global food production and biodiversity as these essential insects face unprecedented declines.',
+        image: './assets/news/pesticides-bee-populations.png',
+        link: 'pesticides+bee+populations',
     },
     {
-        "title": "Desertification: Expanding Drylands",
-        "summary": "Desertification is turning fertile lands into deserts at an alarming rate, driven by climate change and unsustainable agricultural practices, leading to food shortages and displacement of communities.",
-        "image": "./assets/news/desertification.png",
-        "link": "desertification+drylands"
+        title: 'Desertification: Expanding Drylands',
+        summary:
+            'Desertification is turning fertile lands into deserts at an alarming rate, driven by climate change and unsustainable agricultural practices, leading to food shortages and displacement of communities.',
+        image: './assets/news/desertification.png',
+        link: 'desertification+drylands',
     },
     {
-        "title": "Heatwaves Becoming More Frequent and Deadly",
-        "summary": "The increasing frequency and intensity of heatwaves are causing widespread health crises, especially in vulnerable populations, and are straining power grids and water supplies in affected regions.",
-        "image": "./assets/news/heatwaves.png",
-        "link": "heatwaves+frequency+deadly"
+        title: 'Heatwaves Becoming More Frequent and Deadly',
+        summary:
+            'The increasing frequency and intensity of heatwaves are causing widespread health crises, especially in vulnerable populations, and are straining power grids and water supplies in affected regions.',
+        image: './assets/news/heatwaves.png',
+        link: 'heatwaves+frequency+deadly',
     },
     {
-        "title": "Climate Change Intensifying Storms and Hurricanes",
-        "summary": "Climate change is intensifying the frequency and strength of storms and hurricanes, causing unprecedented damage to coastal regions and leading to significant economic and human losses.",
-        "image": "./assets/news/intensifying-storms.png",
-        "link": "climate+change+intensifying+storms"
+        title: 'Climate Change Intensifying Storms and Hurricanes',
+        summary:
+            'Climate change is intensifying the frequency and strength of storms and hurricanes, causing unprecedented damage to coastal regions and leading to significant economic and human losses.',
+        image: './assets/news/intensifying-storms.png',
+        link: 'climate+change+intensifying+storms',
     },
     {
-        "title": "Invasive Species Disrupting Ecosystems",
-        "summary": "The spread of invasive species is disrupting native ecosystems, leading to the decline or extinction of indigenous species, altering habitats, and causing significant economic damage.",
-        "image": "./assets/news/invasive-species.png",
-        "link": "invasive+species+disrupting+ecosystems"
-    }
+        title: 'Invasive Species Disrupting Ecosystems',
+        summary:
+            'The spread of invasive species is disrupting native ecosystems, leading to the decline or extinction of indigenous species, altering habitats, and causing significant economic damage.',
+        image: './assets/news/invasive-species.png',
+        link: 'invasive+species+disrupting+ecosystems',
+    },
+    {
+        title: 'Rising Sea Levels Threaten Coastal Cities',
+        summary:
+            'As global temperatures rise, melting ice caps and glaciers are causing sea levels to rise, putting coastal cities at risk of flooding and displacement.',
+        image: './assets/news/sea-levels-threaten-cities.png',
+        link: 'rising+sea+levels+coastal+cities',
+    },
 ];
 
 module.exports = ARTICLES;
