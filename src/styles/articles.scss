@@ -26,9 +26,15 @@ $article-preview-width: 180px;
         width: 100%;
         flex-direction: row;
         justify-content: flex-end;
+
+
         align-items: center;
         gap: $padding;
         padding: $padding;
+
+        @media screen and (max-width: $responsive) {
+            justify-content: center;
+        }
 
         button {
             border-bottom: 2px solid transparent;
