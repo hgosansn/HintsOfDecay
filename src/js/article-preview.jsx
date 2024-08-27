@@ -49,16 +49,22 @@ export default class ArticlePreview extends React.Component {
             Math.floor(ARTICLES.length / PAGE_SIZE),
             this.currentPageIndex + 1
         );
+        // scroll to top
+        window.scrollTo(0, 0);
         this.forceUpdate();
     }
 
     prevPage() {
         this.currentPageIndex = Math.max(0, this.currentPageIndex - 1);
+        // scroll to top
+        window.scrollTo(0, 0);
         this.forceUpdate();
     }
 
     goTo(pageIndex) {
         this.currentPageIndex = pageIndex;
+        // scroll to top
+        window.scrollTo(0, 0);
         this.forceUpdate();
     }
 

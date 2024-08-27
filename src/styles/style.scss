@@ -64,6 +64,10 @@ button {
 
     font-family: 'Son Of A Glitch', sans-serif;
     font-size: 32px;
+
+    @media screen and (max-width: $responsive) {
+        padding: 0 $padding;
+    }
 }
 
 .container {
