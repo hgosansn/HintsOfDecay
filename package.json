@@ -25,7 +25,7 @@
     "html-minimizer-webpack-plugin": "^5.0.0",
     "html-webpack-plugin": "^5.6.0",
     "openai": "^4.76.3",
-    "prettier": "^3.3.3",
+    "prettier": "^3.6.2",
     "robotstxt-webpack-plugin": "^8.0.0",
     "sass": "^1.78.0",
     "sass-loader": "^16.0.4",
